@@ -18,7 +18,7 @@ touch "$INSTALL_LOC" || { echo "ERROR: Cannot write to $GOSS_DST set GOSS_DST el
 arch=""
 if [ "$(uname -m)" = "x86_64" ]; then
     arch="amd64"
-elif [ "$(uname -m)" = "aarch64" ]; then
+elif [ "$(uname -m)" = "aarch64" ] || [ "$(uname -m)" = "armv7l" ]; then
     arch="arm"
 else
     arch="386"
